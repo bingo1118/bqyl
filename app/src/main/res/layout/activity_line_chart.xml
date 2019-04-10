@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/title_bar" />
+
+    <lecho.lib.hellocharts.view.LineChartView
+        android:id="@+id/lvc_main"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:transitionName="line" />
+    <include layout="@layout/progress_bar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lvc_main"
+        android:layout_centerHorizontal="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="20dp">
+        <ImageView
+            android:id="@+id/btn_next"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/next_selector"
+            android:layout_toRightOf="@+id/btn_new"
+            android:layout_marginLeft="20dp"
+            android:textColor="#ffffff" />
+        <ImageView
+            android:id="@+id/btn_new"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/new_selector"
+            />
+        <ImageView
+            android:id="@+id/btn_before"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_toLeftOf="@id/btn_new"
+            android:layout_marginRight="20dp"
+            android:background="@mipmap/prve_an" />
+        <EditText
+            android:id="@+id/page_edit"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/btn_new"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:background="@drawable/edit_view_bg"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/page_edit"
+            android:layout_alignBaseline="@id/page_edit"
+            android:layout_marginRight="5dp"
+            android:text="第"/>
+        <TextView
+            android:id="@+id/ye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/page_edit"
+            android:layout_alignBaseline="@id/page_edit"
+            android:layout_marginLeft="5dp"
+            android:text="页"/>
+        <TextView
+            android:id="@+id/btn_turnto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ye"
+            android:layout_alignBaseline="@id/page_edit"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/blue"
+            android:text="跳转到该页》》"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
